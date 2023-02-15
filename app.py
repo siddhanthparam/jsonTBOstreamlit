@@ -9,13 +9,11 @@ import math
 
 st.subheader("Upload JSON inventory file to get monthly TBO")
 
-json_file = st.file_uploader("Upload audio file", type=['json'])
+json_file = st.file_uploader("Upload json file", type=['json'])
 
 def save_import(file):
     if file.size > 4000000000000:
         return 1
-    # if not os.path.exists("audio"):
-    #     os.makedirs("audio")
     folder = "import"
     datetoday = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     # clear the folder to avoid storage overload
